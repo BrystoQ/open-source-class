@@ -1,10 +1,15 @@
 {
   "name": "roll-dice-quentin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An open source projet for class to being able to roll a dice.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npm run build && ts-node test/scripts.ts",
+    "build": "tsup index.ts --format cjs,esm --dts --clean",
+    "publish": "npm run build && npm publish",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "dice",
@@ -19,5 +24,10 @@
   "bugs": {
     "url": "https://github.com/BrystoQ/open-source-class/issues"
   },
-  "homepage": "https://github.com/BrystoQ/open-source-class#readme"
+  "homepage": "https://github.com/BrystoQ/open-source-class#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
 }
