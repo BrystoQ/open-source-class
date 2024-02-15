@@ -1,0 +1,23 @@
+{
+  "name": "roll-dice-quentin",
+  "version": "1.0.0",
+  "description": "An open source projet for class to being able to roll a dice.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dice",
+    "roll"
+  ],
+  "author": "BrystoQ",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrystoQ/open-source-class"
+  },
+  "bugs": {
+    "url": "https://github.com/BrystoQ/open-source-class/issues"
+  },
+  "homepage": "https://github.com/BrystoQ/open-source-class#readme"
+}
