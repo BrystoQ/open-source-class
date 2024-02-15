@@ -11,7 +11,7 @@ class Dice {
     };
   }
 
-  roll(diceType: keyof DiceTypeInterface) {
+  roll(diceType: keyof DiceTypeInterface): void {
     const selectedDice = this.diceTypes[diceType];
     if (!selectedDice) {
       console.log("Invalid dice type. Available types are: 6, 10, 20, 100.");
