@@ -1,4 +1,7 @@
+import { DiceTypeInterface } from "./DiceType.interface";
+
 class Dice {
+  diceTypes: DiceTypeInterface;
   constructor() {
     this.diceTypes = {
       6: { sides: 6, name: "6-sided dice" },
@@ -8,12 +11,7 @@ class Dice {
     };
   }
 
-  roll(diceType = null) {
-    if (!diceType) {
-      console.log("Please specify the type of dice (6, 10, 20, or 100).");
-      return;
-    }
-
+  roll(diceType: keyof DiceTypeInterface) {
     const selectedDice = this.diceTypes[diceType];
     if (!selectedDice) {
       console.log("Invalid dice type. Available types are: 6, 10, 20, 100.");
@@ -26,4 +24,4 @@ class Dice {
   }
 }
 
-module.exports = Dice;
+export default Dice;

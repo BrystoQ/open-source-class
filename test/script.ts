@@ -1,4 +1,5 @@
-const diceModule = require("open-source-class");
+import Dice from "..";
+
 const dice = new Dice();
 dice.roll(6);
 dice.roll(10);

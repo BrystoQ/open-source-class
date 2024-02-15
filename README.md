@@ -16,13 +16,13 @@ A module to be able to create a Dice and roll it
 ## Installation
 
 ```bash
-npm install roll-dice-quentin@1.0.0
+npm install roll-dice-quentin
 ```
 
 ## Usage
 
-```bash
-const diceModule = require("open-source-class");
+```ts
+import Dice from "roll-dice-quentin";
 const dice = new Dice();
 dice.roll(6);
 dice.roll(10);
